@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Hendry Joellyo Pattiasina 2172038">
+    <title>Soal 4</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: sans-serif;
+        overflow: hidden;
+        cursor: none;
+    }
+
+    #cursor {
+        background-color: red;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000;
+        box-sizing: border-box;
+        transition: 0.1s;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    </style>
+</head>
+<body>
+    
+    <div id="cursor"></div>
+    <script>
+        let cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', function(e){
+          let x = e.clientX;
+          let y = e.clientY;
+          cursor.style.left = x + "px";
+          cursor.style.top = y + "px";
+        })
+    </script>
+</body>
+</html>
